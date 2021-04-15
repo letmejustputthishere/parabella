@@ -2,7 +2,6 @@
     import { onMount } from "svelte";
     import Chart from "chart.js/auto";
 
-
     var plugin = {
         beforeDraw: function (chart) {
             var chartArea = chart.chartArea;
@@ -17,7 +16,7 @@
             var midY = yScale.getPixelForValue(0);
 
             // Top left quadrant
-            ctx.fillStyle = "red";
+            ctx.fillStyle = "rgba(255, 99, 132, 0.2)";
             ctx.fillRect(
                 chartArea.left,
                 chartArea.top,
@@ -26,7 +25,7 @@
             );
 
             // Top right quadrant
-            ctx.fillStyle = "blue";
+            ctx.fillStyle = "rgba(54, 162, 235, 0.2)";
             ctx.fillRect(
                 midX,
                 chartArea.top,
@@ -35,7 +34,7 @@
             );
 
             // Bottom right quadrant
-            ctx.fillStyle = "green";
+            ctx.fillStyle = "rgba(52, 211, 153, 0.2)";
             ctx.fillRect(
                 midX,
                 midY,
@@ -44,7 +43,7 @@
             );
 
             // Bottom left quadrant
-            ctx.fillStyle = "yellow";
+            ctx.fillStyle = "rgba(251, 191, 36, 0.2)";
             ctx.fillRect(
                 chartArea.left,
                 midY,
