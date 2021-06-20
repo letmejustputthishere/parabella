@@ -1,30 +1,13 @@
-<script lang="typescript">
-	import page from "page";
-
-	import Chart from "./components/Chart.svelte";
+<script lang="ts">
+	import Chart from "./routes/Dashboard.svelte";
 	import Survey from "./pages/Survey.svelte";
 	import LandingPage from "./pages/LandingPage.svelte";
-	
-	let mode: number = 1	
-	
-	// reactive variables
-	let page_;
-	let context;
 
-	page('/search', 		  				(c)=>{ page_ = AllListings; context = c });
-	page("/", (c) => {
-		page_ = LandingPage;
-		context = c;
-	});
-	page("/survey", (c) => {
-		page_ = Survey;
-		context = c;
-	});
-	page("/dashboard", (c) => {
-		page_ = Chart;
-		context = c;
+	let mode: number = 1;
 
-<svelte:component this={page_} context={context}/>
+
+</script>
+
 
 {#if mode === 1}
 	<LandingPage bind:mode />
