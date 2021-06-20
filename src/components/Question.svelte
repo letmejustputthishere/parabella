@@ -11,7 +11,7 @@
     <header class="flex flex-row items-center justify-center">
         {#each choices as choice}
             <label>
-                <input class="rounded text-pink-600" type="radio" bind:group={currentChoice} value={choice} />
+                <input class="rounded text-pink-500" type="radio" bind:group={currentChoice} value={choice} />
                 {choice}
             </label>
         {/each}

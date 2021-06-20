@@ -7,6 +7,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.3.2",
     "chart.js": "^3.1.0",
+    "page": "^1.11.6",
     "svelte": "^3.32.1"
   },
   "devDependencies": {
@@ -17,6 +18,7 @@
     "@snowpack/plugin-svelte": "^3.5.2",
     "@snowpack/plugin-typescript": "^1.2.1",
     "@tsconfig/svelte": "^1.0.10",
+    "@types/page": "^1.11.2",
     "@types/snowpack-env": "^2.3.3",
     "autoprefixer": "^10.2.4",
     "postcss": "^8.2.4",
