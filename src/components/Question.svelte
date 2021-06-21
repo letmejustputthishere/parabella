@@ -1,21 +1,26 @@
 <script lang="ts">
-    let choices = [1, 2, 3, 4, 5];
-    let currentChoice = 1;
-
-
     export let question = "";
+    export let language: string;
+
+    let choicesGerman = ["Stimme überhaupt nicht zu", "Stimme teilweise zu", "Stimme weder zu / nicht zu", "Stimme teilweise zu", "Stimme vollständig zu"];
+    let choicesEnglish = ["Disagree completely", "Agree partially", "Neither agree nor disagree", "Agree partially", "Agree completely"];
+    
+    let currentChoice = language === "english" ? choicesEnglish[0] : choicesGerman[0];
 </script>
 
-<div class="text-center">
-    <h1>{question}</h1>
-    <header class="flex flex-row items-center justify-center">
-        {#each choices as choice}
-            <label>
-                <input class="rounded text-pink-500" type="radio" bind:group={currentChoice} value={choice} />
+<div class="my-12 bg-primary-50 border">
+    <h1 class="text-left ml-20 text-xl">{question}</h1>
+    <container class="flex flex-row items-center justify-center my-2">
+        {#each language === "english" ? choicesEnglish : choicesGerman as choice, index}
+            <label class="flex flex-col mx-7 items-center justify-center">
+                <input
+                    class="h-6 w-6 rounded-xl text-primary-500"
+                    type="radio"
+                    bind:group={currentChoice}
+                    value={index}
+                />
                 {choice}
             </label>
         {/each}
-    </header>
+    </container>
 </div>
-
-

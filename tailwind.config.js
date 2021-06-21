@@ -16,6 +16,7 @@ module.exports = {
             transparent: 'transparent',
             current: 'currentColor',
 
+            primary: colors.blue,
             black: colors.black,
             white: colors.white,
             gray: colors.coolGray,
@@ -762,6 +763,9 @@ module.exports = {
         divideOpacity: ['responsive'],
         divideStyle: ['responsive'],
         divideWidth: ['responsive'],
+        extend: {
+            opacity: ['disabled']
+        },
         fill: ['responsive'],
         flex: ['responsive'],
         flexDirection: ['responsive'],
