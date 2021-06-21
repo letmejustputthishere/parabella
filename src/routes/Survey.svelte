@@ -1,13 +1,13 @@
 <script lang="ts">
+    import { Link } from "svelte-routing";
     import Question from "../components/Question.svelte";
 
     export let language: string;
+    export let answers: number[][];
 
     window.document.body.classList.toggle("survey");
 
     let index = 0;
-
-    $: console.log(index);
 
     let questions = {
         german: [
@@ -128,19 +128,36 @@
     function increaseIndex() {
         index += 1;
     }
+
+    function validate(answers: number[][]): boolean {
+        for (let topic = 0; topic < answers.length; topic++) {
+            for (
+                let question = 0;
+                question < answers[topic].length;
+                question++
+            ) {
+                if (answers[topic][question] === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    $: validated = validate(answers);
 </script>
 
-{#if language === "english"}
-    {#each questions.english[index] as question}
-        <Question {question} {language} />
-    {/each}
-{:else if language === "german"}
-    {#each questions.german[index] as question}
-        <Question {question} {language} />
-    {/each}
-{/if}
+{#each language === "english" ? questions.english[index] : questions.german[index] as question, questionIndex}
+    <Question
+        {question}
+        {language}
+        topicIndex={index}
+        {questionIndex}
+        bind:answers
+    />
+{/each}
 
-<div class="flex flex-row items-center justify-center">
+<div class="mt-16 flex flex-row items-center justify-center">
     <button
         class="bg-primary-500 hover:bg-primary-700 border text-2xl text-white mt-4 p-2 px-3 disabled:opacity-50"
         disabled={index === 0}
@@ -157,3 +174,16 @@
         {language === "english" ? "NEXT" : "WEITER"}
     </button>
 </div>
+
+<!-- submit button -->
+{#if validated}
+    <div class="flex items-center justify-center">
+        <button
+            class="bg-green-500 hover:bg-green-700 border text-2xl text-white mt-4 p-2 px-3"
+        >
+            <Link to="dashboard"
+                >{language === "english" ? "EVALUATE" : "AUSWERTEN"}</Link
+            >
+        </button>
+    </div>
+{/if}

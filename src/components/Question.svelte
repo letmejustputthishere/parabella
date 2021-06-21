@@ -1,11 +1,24 @@
 <script lang="ts">
     export let question = "";
     export let language: string;
+    export let topicIndex: number;
+    export let questionIndex: number;
+    export let answers: number[][];
 
-    let choicesGerman = ["Stimme überhaupt nicht zu", "Stimme teilweise zu", "Stimme weder zu / nicht zu", "Stimme teilweise zu", "Stimme vollständig zu"];
-    let choicesEnglish = ["Disagree completely", "Agree partially", "Neither agree nor disagree", "Agree partially", "Agree completely"];
-    
-    let currentChoice = language === "english" ? choicesEnglish[0] : choicesGerman[0];
+    let choicesGerman = [
+        "Stimme überhaupt nicht zu",
+        "Stimme teilweise zu",
+        "Stimme weder zu / nicht zu",
+        "Stimme teilweise zu",
+        "Stimme vollständig zu",
+    ];
+    let choicesEnglish = [
+        "Disagree completely",
+        "Agree partially",
+        "Neither agree nor disagree",
+        "Agree partially",
+        "Agree completely",
+    ];
 </script>
 
 <div class="my-12 bg-primary-50 border">
@@ -16,10 +29,12 @@
                 <input
                     class="h-6 w-6 rounded-xl text-primary-500"
                     type="radio"
-                    bind:group={currentChoice}
-                    value={index}
+                    bind:group={answers[topicIndex][questionIndex]}
+                    value={index + 1}
                 />
-                {choice}
+                <span>
+                    {choice}
+                </span>
             </label>
         {/each}
     </container>

@@ -7,6 +7,20 @@
 	let language = "english";
 
 	export let url = "";
+
+	// let answers: number[][] = [
+	// 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	// 	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	// 	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	// 	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	// ];
+
+	let answers: number[][] = [
+		[1, 1, 1, 1, 1, 1, 1, 1, 1],
+		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+	];
 </script>
 
 <select bind:value={language} class="text-gray-700 border ml-1">
@@ -15,11 +29,10 @@
 </select>
 
 <Router {url}>
-	<div>
-		<Route path="survey"><Survey {language} /></Route>
-		<Route path="dashboard" component={Dashboard} />
-		<Route path="/"><LandingPage {language} /></Route>
-	</div>
+	<!-- <Route path="survey"><Survey {language} /></Route> -->
+	<Route path="/"><Survey {language} {answers}/></Route>
+	<Route path="dashboard" component={Dashboard} />
+	<!-- <Route path="/"><LandingPage {language} /></Route> -->
 </Router>
 
 <style>
