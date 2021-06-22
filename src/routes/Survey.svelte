@@ -123,6 +123,8 @@
     };
 
     function decreaseIndex() {
+        console.log("decrease");
+
         index -= 1;
     }
     function increaseIndex() {
@@ -157,7 +159,7 @@
     />
 {/each}
 
-<div class="mt-16 flex flex-row items-center justify-center">
+<div class="mt-8 flex flex-row items-center justify-center">
     <button
         class="bg-primary-500 hover:bg-primary-700 border text-2xl text-white mt-4 p-2 px-3 disabled:opacity-50"
         disabled={index === 0}
@@ -176,14 +178,17 @@
 </div>
 
 <!-- submit button -->
-{#if validated}
-    <div class="flex items-center justify-center">
-        <button
-            class="bg-green-500 hover:bg-green-700 border text-2xl text-white mt-4 p-2 px-3"
-        >
+<div class="mb-8 flex items-center justify-center">
+    <button
+        class="bg-green-500 hover:bg-green-700 border text-2xl text-white mt-4 p-2 px-3 disabled:opacity-50"
+        disabled={!validated}
+    >
+        {#if validated}
             <Link to="dashboard"
                 >{language === "english" ? "EVALUATE" : "AUSWERTEN"}</Link
             >
-        </button>
-    </div>
-{/if}
+        {:else}
+            {language === "english" ? "EVALUATE" : "AUSWERTEN"}
+        {/if}
+    </button>
+</div>
