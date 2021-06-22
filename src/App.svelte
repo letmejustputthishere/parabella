@@ -16,7 +16,7 @@
 	// ];
 
 	let answers: number[][] = [
-		[1, 1, 1, 1, 1, 1, 1, 1, 1],
+		[1, 2, 1, 5, 1, 3, 5, 1, 1],
 		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -29,10 +29,12 @@
 </select>
 
 <Router {url}>
-	<!-- <Route path="survey"><Survey {language} /></Route> -->
-	<Route path="/"><Survey {language} {answers}/></Route>
-	<Route path="dashboard" component={Dashboard} />
+	<!-- <Route path="/"><Survey {language} bind:answers/></Route> -->
+	<Route path="/"><Dashboard {language} bind:answers /></Route>
+
 	<!-- <Route path="/"><LandingPage {language} /></Route> -->
+	<Route path="survey"><Survey {language} bind:answers /></Route>
+	<Route path="dashboard"><Dashboard {language} {answers} /></Route>
 </Router>
 
 <style>
