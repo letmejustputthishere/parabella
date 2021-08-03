@@ -1,11 +1,14 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import { Link } from "svelte-routing";
     import Question from "../components/Question.svelte";
 
     export let language: string;
     export let answers: number[][];
 
-    window.document.body.classList.toggle("survey");
+    onMount(() => {
+        window.document.body.className = "survey";
+    });
 
     let index = 0;
 
@@ -123,12 +126,12 @@
     };
 
     function decreaseIndex() {
-        console.log("decrease");
-
         index -= 1;
+        topFunction();
     }
     function increaseIndex() {
         index += 1;
+        topFunction();
     }
 
     function validate(answers: number[][]): boolean {
@@ -147,7 +150,31 @@
     }
 
     $: validated = validate(answers);
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
 </script>
+
+<div class="mt-8 flex flex-row items-center justify-center">
+    <button
+        class="bg-primary-500 hover:bg-primary-700 border text-2xl text-white mt-4 p-2 px-3 disabled:opacity-50"
+        disabled={index === 0}
+        on:click|preventDefault={decreaseIndex}
+    >
+        {language === "english" ? "BACK" : "ZURÜCK"}
+    </button>
+
+    <button
+        class="bg-primary-500 hover:bg-primary-700 border text-2xl text-white mt-4 p-2 px-3 disabled:opacity-50"
+        disabled={index === 3}
+        on:click|preventDefault={increaseIndex}
+    >
+        {language === "english" ? "NEXT" : "WEITER"}
+    </button>
+</div>
 
 {#each language === "english" ? questions.english[index] : questions.german[index] as question, questionIndex}
     <Question
