@@ -3,6 +3,7 @@
     import Chart from "chart.js/auto";
 
     export let answers: number[][];
+    export let language: string;
 
     function calculateSum(array: number[]) {
         let sum = 0;
@@ -66,22 +67,16 @@
             var xScale = chart.scales["x"];
             var yScale = chart.scales["y"];
 
-            console.log(ctx);
-
             var midX = xScale.getPixelForValue(xScale.max / 2);
             var midY = yScale.getPixelForValue(yScale.max / 2);
 
-            // Top left quadrant
-            ctx.fillStyle = "rgba(255, 99, 132, 0.2)";
-            ctx.fillRect(
-                chartArea.left,
-                chartArea.top,
-                midX - chartArea.left,
-                midY - chartArea.top
-            );
-
+            // calculate the font size depending on the actual size
+            // of the canvas element
+            let fontSize = Math.floor(
+                document.getElementById("scatter")!.offsetWidth / 23
+            ).toString();
             ctx.fillStyle = "rgb(0, 0, 0)";
-            ctx.font = "2em sans-serif";
+            ctx.font = fontSize + "px sans-serif";
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
             ctx.fillText(
@@ -108,6 +103,14 @@
                 yScale.getPixelForValue(155 / 2 - 5)
             );
 
+            // Top left quadrant
+            ctx.fillStyle = "rgba(255, 99, 132, 0.2)";
+            ctx.fillRect(
+                chartArea.left,
+                chartArea.top,
+                midX - chartArea.left,
+                midY - chartArea.top
+            );
             // Top right quadrant
             ctx.fillStyle = "rgba(54, 162, 235, 0.2)";
             ctx.fillRect(
@@ -139,7 +142,8 @@
 
     function createChart() {
         // create scatter
-        var ctx = document.getElementById("scatter").getContext("2d");
+        const canvas = <HTMLCanvasElement>document.getElementById("scatter");
+        const ctx = canvas.getContext("2d");
         new Chart(ctx, {
             type: "scatter",
             plugins: [plugin],
@@ -151,11 +155,45 @@
                         position: "bottom",
                         min: 0,
                         max: 45,
+                        title: {
+                            text:
+                                language === "english"
+                                    ? [
+                                          "Sum of all",
+                                          "digital enablement points achieved",
+                                      ]
+                                    : [
+                                          "Summe aller erreichten",
+                                          "Digital Enablement Punkte",
+                                      ],
+                            display: true,
+                            color: "black",
+                            font: {
+                                size: 30,
+                            },
+                        },
                     },
                     y: {
                         type: "linear",
                         min: 0,
                         max: 155,
+                        title: {
+                            text:
+                                language === "english"
+                                    ? [
+                                          "Sum of all Technology",
+                                          "points of all departments",
+                                      ]
+                                    : [
+                                          "Summe aller Technology",
+                                          "Punkte aller Abteilungen",
+                                      ],
+                            display: true,
+                            color: "black",
+                            font: {
+                                size: 30,
+                            },
+                        },
                     },
                 },
                 pointRadius: 10,

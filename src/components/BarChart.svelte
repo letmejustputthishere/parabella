@@ -35,7 +35,6 @@
                 },
             ],
         };
-
         const canvas = <HTMLCanvasElement>document.getElementById(id);
         const ctx = canvas.getContext("2d");
 

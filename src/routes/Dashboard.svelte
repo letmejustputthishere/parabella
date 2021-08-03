@@ -115,7 +115,7 @@
             <h1 class="text-4xl mb-3">
                 {language === "english" ? "Your category" : "Ihre Kategorie"}
             </h1>
-            <ScatterChart {answers} />
+            <ScatterChart {answers} {language} />
         </div>
     </div>
 </div>
