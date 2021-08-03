@@ -1,25 +1,10 @@
 <script>
     import { onMount } from "svelte";
     import Chart from "chart.js/auto";
+    import { calculateNestedSum, calculateSum } from "../utils/calculations";
 
     export let answers: number[][];
     export let language: string;
-
-    function calculateSum(array: number[]) {
-        let sum = 0;
-        for (let index = 0; index < array.length; index++) {
-            sum += array[index];
-        }
-        return sum;
-    }
-
-    function calculateNestedSum(array: number[][]) {
-        let sum = 0;
-        for (let index = 1; index < array.length; index++) {
-            sum += calculateSum(array[index]);
-        }
-        return sum;
-    }
 
     const data2 = {
         datasets: [

@@ -3,6 +3,7 @@
     import Chart from "chart.js/auto";
     import ScatterChart from "../components/ScatterChart.svelte";
     import RadarChart from "../components/RadarChart.svelte";
+    import BarChart from "../components/BarChart.svelte";
 
     export let answers: number[][];
     export let language: string;
@@ -90,6 +91,11 @@
                 competition={competition[1]}
                 id="stp"
             />
+            <BarChart
+                answers={answers[1]}
+                competition={competition[1]}
+                id="stp-bar"
+            />
         </div>
         <div class="m-8">
             <h2 class="text-2xl mb-3">Plan to Produce</h2>
@@ -99,6 +105,11 @@
                 competition={competition[2]}
                 id="ptp"
             />
+            <BarChart
+                answers={answers[2]}
+                competition={competition[2]}
+                id="ptp-bar"
+            />
         </div>
         <div class="m-8">
             <h2 class="text-2xl mb-3">Order to Cash</h2>
@@ -107,6 +118,11 @@
                 labels={labels[3]}
                 competition={competition[3]}
                 id="otc"
+            />
+            <BarChart
+                answers={answers[3]}
+                competition={competition[3]}
+                id="otc-bar"
             />
         </div>
     </div>

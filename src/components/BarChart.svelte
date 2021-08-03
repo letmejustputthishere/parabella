@@ -1,19 +1,19 @@
 <script>
     import { onMount } from "svelte";
     import Chart from "chart.js/auto";
+    import { calculateNestedSum, calculateSum } from "../utils/calculations";
 
     export let id: string;
     export let answers: number[];
-    export let labels: string[];
     export let competition: number[];
 
     function initChart() {
         const data = {
-            labels: labels,
+            labels: [""],
             datasets: [
                 {
                     label: "Your company",
-                    data: answers,
+                    data: [calculateSum(answers)],
                     fill: true,
                     backgroundColor: "rgba(255, 99, 132, 0.2)",
                     borderColor: "rgb(255, 99, 132)",
@@ -24,7 +24,7 @@
                 },
                 {
                     label: "Competition",
-                    data: competition,
+                    data: [calculateSum(competition)],
                     fill: true,
                     backgroundColor: "rgba(54, 162, 235, 0.2)",
                     borderColor: "rgb(54, 162, 235)",
@@ -39,14 +39,32 @@
         const ctx = canvas.getContext("2d");
 
         new Chart(ctx, {
-            type: "radar",
+            type: "bar",
             data: data,
             options: {
+                indexAxis: "y",
                 scales: {
-                    r: {
+                    x: {
                         beginAtZero: true,
-                        suggestedMin: 1,
-                        suggestedMax: 5,
+                        ticks: {
+                            min: 0,
+                            max: 5 * answers.length,
+                            callback: function (value: number) {
+                                return (
+                                    (
+                                        (value / (5 * answers.length)) *
+                                        100
+                                    ).toFixed(0) + "%"
+                                ); // convert it to percentage
+                            },
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: "Percentage",
+                        },
+                    },
+                    y: {
+                        beginAtZero: true,
                     },
                 },
                 elements: {
