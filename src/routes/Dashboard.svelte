@@ -20,41 +20,41 @@
             "Building Transparency",
         ],
         [
-            "Cloud-based business network implemented for direct and indirect e-procurement.",
-            "Digital supplier management platform in place foster collaboration",
-            "Advanced and with supplier connected contract management tool is implemented",
-            "Spend management platform in place supported by analytics",
-            "Robotic process automation (RPA) technology in place to automate procure to pay processes.",
-            "Artificial Intelligence / Machine-learning / Predictive Analytics to optimize Source-to-Pay processes",
-            "Transportation Managemenent System  integrated to ERP to optimize inbound transports",
-            "Predictive ETA-Calculation for incoming shipments is implemented",
-            "Material flow system connection to ERP/WMS is established",
-            "Internet of Things (IoT) infrastructure / platform is established",
+            "Cloud-based e-procurement",
+            "Supplier management platform",
+            "Contract management tool",
+            "Spend management platform",
+            "RPA",
+            "Machine learning",
+            "TMS",
+            "Predictive analytics",
+            "Material flow system",
+            "IoT",
         ],
         [
-            "Advanced Sales & Operations Planning (S&OP) system in place",
-            "Integrated demand sensing / planning system is implemented",
-            "Integrated supply planning system is implemented",
-            "Advanced production planning system is implemented and integrated to ERP",
-            "Manufacturing Execution System (MES) is implemented integrated to ERP",
-            "Paperless cockpits are established at shopfloor level",
-            "Machine-to-machine communication is established",
-            "Internet of Things (IoT) infrastructure / platform is implemented",
-            "Automated Guided Vehicle / Driverless material transportation systems",
-            "Robotics Process Automation (RPA) to automate plan-to-Produce processes",
-            "Artificial Intelligence / Machine-learning / Predictive Analytics to optimize Plan-to-Produce processes",
+            "S&OP",
+            "Demand sensing",
+            "Supply planning",
+            "Production planning",
+            "MES",
+            "Paperless Cockpit",
+            "M2M",
+            "IoT",
+            "AD",
+            "RPA",
+            "Machine learning",
         ],
         [
-            "Customer relationship management system implemented and connected to ERP",
-            "Chatbots in place to manage customer requests",
-            "Robotics Process Automation (RPA) to support source-to-pay processes",
-            "Artificial Intelligence / Machine-learning to optimize order-to-cash processes",
-            "Warehouse management system implemented and connected to ERP",
-            "Hands-free picking (Pick by voice/light, augmented reality)",
-            "Internet of Things (IoT) infrastructure / platform",
-            "Digital Twin of the distribution warehouse",
-            "Transportation management system implemented and connected to ERP",
-            "Visibility platform in place for outgoing transports",
+            "CRM",
+            "Chatbot",
+            "RPA",
+            "Machine learning",
+            "WMS",
+            "Hands-free picking",
+            "IoT",
+            "Digital Twin",
+            "TMS",
+            "Transport platform",
         ],
         ["Source to Pay", "Plan to Produce", "Order to Cash"],
     ];
@@ -68,19 +68,21 @@
     ];
 </script>
 
-<div class="flex flex-col justify-center items-center">
-    <div class="w-2/3">
+<div class="flex flex-col justify-center items-center m-8">
+    <div class="m-20 w-2/3">
         <h1 class="-ml-6 text-4xl mb-3">Digital Enablement</h1>
-        <RadarChart
-            answers={answers[0]}
-            labels={labels[0]}
-            competition={competition[0]}
-            id="enablement"
-        />
+        <div class="m-8">
+            <RadarChart
+                answers={answers[0]}
+                labels={labels[0]}
+                competition={competition[0]}
+                id="enablement"
+            />
+        </div>
     </div>
-    <div class="w-2/3">
+    <div class="m-20 w-2/3">
         <h1 class="-ml-6 text-4xl mb-3">Technology Adoption</h1>
-        <div>
+        <div class="m-8">
             <h2 class="text-2xl mb-3">Source to Pay</h2>
             <RadarChart
                 answers={answers[1]}
@@ -89,7 +91,7 @@
                 id="stp"
             />
         </div>
-        <div>
+        <div class="m-8">
             <h2 class="text-2xl mb-3">Plan to Produce</h2>
             <RadarChart
                 answers={answers[2]}
@@ -98,7 +100,7 @@
                 id="ptp"
             />
         </div>
-        <div>
+        <div class="m-8">
             <h2 class="text-2xl mb-3">Order to Cash</h2>
             <RadarChart
                 answers={answers[3]}
@@ -108,8 +110,12 @@
             />
         </div>
     </div>
-    <div class="w-2/3">
-        <h1 class="text-4xl mb-3">Your category</h1>
-        <ScatterChart {answers} />
+    <div class="m-20 w-2/3">
+        <div class="m-8">
+            <h1 class="text-4xl mb-3">
+                {language === "english" ? "Your category" : "Ihre Kategorie"}
+            </h1>
+            <ScatterChart {answers} />
+        </div>
     </div>
 </div>
