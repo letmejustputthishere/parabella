@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { Link } from "svelte-routing";
     import Question from "../components/Question.svelte";
+    import { topFunction } from "../utils/scrollToTop";
 
     export let language: string;
     export let answers: number[][];
@@ -150,12 +151,6 @@
     }
 
     $: validated = validate(answers);
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
 </script>
 
 <div class="mt-8 flex flex-row items-center justify-center">

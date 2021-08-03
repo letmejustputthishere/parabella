@@ -4,6 +4,7 @@
     import ScatterChart from "../components/ScatterChart.svelte";
     import RadarChart from "../components/RadarChart.svelte";
     import BarChart from "../components/BarChart.svelte";
+    import { topFunction } from "../utils/scrollToTop";
 
     export let answers: number[][];
     export let language: string;
@@ -67,6 +68,8 @@
         [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2, 5],
         [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2],
     ];
+
+    onMount(topFunction);
 </script>
 
 <div class="flex flex-col justify-center items-center m-8">
