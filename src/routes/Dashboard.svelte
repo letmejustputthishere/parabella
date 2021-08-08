@@ -138,11 +138,13 @@
         </div>
     </div>
     <div class="m-10 w-2/3">
-        <h1 class="text-4xl mb-3">
+        <h1 class="-ml-6 text-4xl mb-3">
             {language === "english" ? "Your category" : "Ihre Kategorie"}
         </h1>
-        <div class="m-8">
-            <ScatterChart {answers} {language} />
+        <div class="flex flex-col items-center justify-center">
+            <div class="m-8 w-2/3">
+                <ScatterChart {answers} {language} />
+            </div>
         </div>
     </div>
 </div>
