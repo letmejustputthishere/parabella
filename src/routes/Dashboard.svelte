@@ -75,65 +75,73 @@
 <div class="flex flex-col justify-center items-center m-8">
     <div class="m-20 w-2/3">
         <h1 class="-ml-6 text-4xl mb-3">Digital Enablement</h1>
-        <div class="m-8">
-            <RadarChart
-                answers={answers[0]}
-                labels={labels[0]}
-                competition={competition[0]}
-                id="enablement"
-            />
+        <div class="flex flex-col justify-center items-center">
+            <div class="m-8 w-2/3">
+                <RadarChart
+                    answers={answers[0]}
+                    labels={labels[0]}
+                    competition={competition[0]}
+                    id="enablement"
+                />
+            </div>
         </div>
     </div>
     <div class="m-20 w-2/3">
         <h1 class="-ml-6 text-4xl mb-3">Technology Adoption</h1>
-        <div class="m-8">
-            <h2 class="text-2xl mb-3">Source to Pay</h2>
-            <RadarChart
-                answers={answers[1]}
-                labels={labels[1]}
-                competition={competition[1]}
-                id="stp"
-            />
-            <BarChart
-                answers={answers[1]}
-                competition={competition[1]}
-                id="stp-bar"
-            />
+        <div class="flex flex-col justify-center items-center">
+            <div class="m-8 w-2/3">
+                <h2 class="text-2xl mb-3">Source to Pay</h2>
+                <RadarChart
+                    answers={answers[1]}
+                    labels={labels[1]}
+                    competition={competition[1]}
+                    id="stp"
+                />
+                <BarChart
+                    answers={answers[1]}
+                    competition={competition[1]}
+                    id="stp-bar"
+                />
+            </div>
         </div>
-        <div class="m-8">
-            <h2 class="text-2xl mb-3">Plan to Produce</h2>
-            <RadarChart
-                answers={answers[2]}
-                labels={labels[2]}
-                competition={competition[2]}
-                id="ptp"
-            />
-            <BarChart
-                answers={answers[2]}
-                competition={competition[2]}
-                id="ptp-bar"
-            />
+        <div class="flex flex-col justify-center items-center">
+            <div class="m-8 w-2/3">
+                <h2 class="text-2xl mb-3">Plan to Produce</h2>
+                <RadarChart
+                    answers={answers[2]}
+                    labels={labels[2]}
+                    competition={competition[2]}
+                    id="ptp"
+                />
+                <BarChart
+                    answers={answers[2]}
+                    competition={competition[2]}
+                    id="ptp-bar"
+                />
+            </div>
         </div>
-        <div class="m-8">
-            <h2 class="text-2xl mb-3">Order to Cash</h2>
-            <RadarChart
-                answers={answers[3]}
-                labels={labels[3]}
-                competition={competition[3]}
-                id="otc"
-            />
-            <BarChart
-                answers={answers[3]}
-                competition={competition[3]}
-                id="otc-bar"
-            />
+        <div class="flex flex-col items-center justify-center">
+            <div class="m-8 w-2/3">
+                <h2 class="text-2xl mb-3">Order to Cash</h2>
+                <RadarChart
+                    answers={answers[3]}
+                    labels={labels[3]}
+                    competition={competition[3]}
+                    id="otc"
+                />
+                <BarChart
+                    answers={answers[3]}
+                    competition={competition[3]}
+                    id="otc-bar"
+                />
+            </div>
         </div>
     </div>
     <div class="m-20 w-2/3">
+        <h1 class="text-4xl mb-3">
+            {language === "english" ? "Your category" : "Ihre Kategorie"}
+        </h1>
         <div class="m-8">
-            <h1 class="text-4xl mb-3">
-                {language === "english" ? "Your category" : "Ihre Kategorie"}
-            </h1>
             <ScatterChart {answers} {language} />
         </div>
     </div>

@@ -79,4 +79,4 @@
     onMount(initChart);
 </script>
 
-<canvas {id} width="4" height="4" />
+<canvas {id} width="4" height="1" />
