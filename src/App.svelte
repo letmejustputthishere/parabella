@@ -8,19 +8,19 @@
 
 	export let url = "";
 
-	// let answers: number[][] = [
-	// 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	// 	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	// 	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	// 	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	// ];
-
 	let answers: number[][] = [
-		[1, 2, 1, 5, 1, 3, 5, 1, 1],
-		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	];
+
+	// let answers: number[][] = [
+	// 	[1, 2, 1, 5, 1, 3, 5, 1, 1],
+	// 	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+	// 	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+	// 	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+	// ];
 </script>
 
 <select bind:value={language} class="text-gray-700 border ml-1">
@@ -30,9 +30,9 @@
 
 <Router {url}>
 	<!-- <Route path="/"><Survey {language} bind:answers/></Route> -->
-	<Route path="/"><Dashboard {language} bind:answers /></Route>
+	<!-- <Route path="/"><Dashboard {language} bind:answers /></Route> -->
 
-	<!-- <Route path="/"><LandingPage {language} /></Route> -->
+	<Route path="/"><LandingPage {language} /></Route>
 	<Route path="survey"><Survey {language} bind:answers /></Route>
 	<Route path="dashboard"><Dashboard {language} {answers} /></Route>
 </Router>
