@@ -45,10 +45,10 @@
                 indexAxis: "y",
                 scales: {
                     x: {
+                        min: 0,
+                        max: 5 * answers.length,
                         beginAtZero: true,
                         ticks: {
-                            min: 0,
-                            max: 5 * answers.length,
                             callback: function (value: number) {
                                 return (
                                     (
