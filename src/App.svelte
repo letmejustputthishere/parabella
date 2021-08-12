@@ -22,6 +22,9 @@
 	// 	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 	// ];
 </script>
+<svelte:head>
+	<title>Parabella Analytics</title>
+</svelte:head>
 
 <select bind:value={language} class="text-gray-700 border ml-1">
 	<option value={"english"}> english </option>
