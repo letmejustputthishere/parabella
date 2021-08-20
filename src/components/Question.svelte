@@ -37,19 +37,25 @@
 
 <div class="my-12 bg-primary-50 border">
     <h1 class="text-left ml-20 text-xl">{question}</h1>
-    <container class="flex flex-row items-center justify-center my-2">
+    <div
+        class="flex flex-col md:flex-row items-start md:items-center justify-center my-2"
+    >
         {#each language === "english" ? (topicIndex >= 1 ? choicesTechnologiesEnglish : choicesDigitalEnablementEnglish) : topicIndex >= 1 ? choicesTechnologiesGerman : choicesDigitalEnablementGerman as choice, index}
-            <label class="flex flex-col mx-7 items-center justify-center">
-                <input
-                    class="h-6 w-6 rounded-xl text-primary-500"
-                    type="radio"
-                    bind:group={answers[topicIndex][questionIndex]}
-                    value={index + 1}
-                />
-                <span>
-                    {choice}
-                </span>
-            </label>
+            <div class="my-2">
+                <label
+                    class="flex flex-row md:flex-col md:mx-7 items-center md:items-center justify-center"
+                >
+                    <input
+                        class="h-6 w-6 rounded-xl text-primary-500 ml-2 mr-4"
+                        type="radio"
+                        bind:group={answers[topicIndex][questionIndex]}
+                        value={index + 1}
+                    />
+                    <span class="text-sm md:text-base">
+                        {choice}
+                    </span>
+                </label>
+            </div>
         {/each}
-    </container>
+    </div>
 </div>
