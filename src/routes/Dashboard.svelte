@@ -72,11 +72,11 @@
     onMount(topFunction);
 </script>
 
-<div class="flex flex-col justify-center items-center m-8">
-    <div class="mt-20 w-2/3">
-        <h1 class="-ml-6 text-4xl mb-3">Digital Enablement</h1>
+<div class="flex flex-col justify-center items-center m-1 md:m-8">
+    <div class="mt-20 w-full md:w-2/3">
+        <h1 class="md:-ml-6 text-4xl mb-3">Digital Enablement</h1>
         <div class="flex flex-col justify-center items-center">
-            <div class="m-8 w-2/3">
+            <div class="m-8 w-full md:w-2/3">
                 <RadarChart
                     answers={answers[0]}
                     labels={labels[0]}
@@ -86,10 +86,10 @@
             </div>
         </div>
     </div>
-    <div class="m-10 w-2/3">
-        <h1 class="-ml-6 text-4xl mb-3">Technology Adoption</h1>
+    <div class="mt-10 w-full md:w-2/3">
+        <h1 class="md:-ml-6 text-4xl mb-3">Technology Adoption</h1>
         <div class="flex flex-col justify-center items-center">
-            <div class="m-8 w-2/3">
+            <div class="m-8 w-full md:w-2/3">
                 <h2 class="text-2xl mb-3">Source to Pay</h2>
                 <RadarChart
                     answers={answers[1]}
@@ -105,7 +105,7 @@
             </div>
         </div>
         <div class="flex flex-col justify-center items-center">
-            <div class="m-8 w-2/3">
+            <div class="m-8 w-full md:w-2/3">
                 <h2 class="text-2xl mb-3">Plan to Produce</h2>
                 <RadarChart
                     answers={answers[2]}
@@ -121,7 +121,7 @@
             </div>
         </div>
         <div class="flex flex-col items-center justify-center">
-            <div class="m-8 w-2/3">
+            <div class="m-8 w-full md:w-2/3">
                 <h2 class="text-2xl mb-3">Order to Cash</h2>
                 <RadarChart
                     answers={answers[3]}
@@ -137,12 +137,12 @@
             </div>
         </div>
     </div>
-    <div class="m-10 w-2/3">
-        <h1 class="-ml-6 text-4xl mb-3">
+    <div class="mt-10 w-full md:w-2/3">
+        <h1 class="md:-ml-6 text-4xl mb-3">
             {language === "english" ? "Your category" : "Ihre Kategorie"}
         </h1>
         <div class="flex flex-col items-center justify-center">
-            <div class="m-8 w-2/3">
+            <div class="m-8 w-full md:w-2/3">
                 <ScatterChart {answers} {language} />
             </div>
         </div>

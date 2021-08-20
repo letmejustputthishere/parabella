@@ -6,6 +6,12 @@
     export let answers: number[][];
     export let language: string;
 
+    function calculateFontSize() {
+        // calculate the font size depending on the actual size
+        // of the canvas element
+        return Math.floor(document.getElementById("scatter")!.offsetWidth / 23);
+    }
+
     const data2 = {
         datasets: [
             {
@@ -54,14 +60,8 @@
 
             var midX = xScale.getPixelForValue(xScale.max / 2);
             var midY = yScale.getPixelForValue(yScale.max / 2);
-
-            // calculate the font size depending on the actual size
-            // of the canvas element
-            let fontSize = Math.floor(
-                document.getElementById("scatter")!.offsetWidth / 23
-            ).toString();
             ctx.fillStyle = "rgb(0, 0, 0)";
-            ctx.font = fontSize + "px sans-serif";
+            ctx.font = calculateFontSize().toString() + "px sans-serif";
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
             ctx.fillText(
@@ -153,9 +153,6 @@
                                       ],
                             display: true,
                             color: "black",
-                            font: {
-                                size: 30,
-                            },
                         },
                     },
                     y: {
@@ -175,9 +172,6 @@
                                       ],
                             display: true,
                             color: "black",
-                            font: {
-                                size: 30,
-                            },
                         },
                     },
                 },
