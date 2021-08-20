@@ -8,8 +8,8 @@
     });
 </script>
 
-<div class="flex flex-col items-center justify-center h-screen">
-    <h1 class="text-6xl text-white font-bold">
+<div class="flex flex-col items-center justify-center h-full">
+    <h1 class="text-6xl text-white font-bold text-center">
         {language === "english"
             ? "Digitization Index"
             : "Digitalisierungsindex"}
