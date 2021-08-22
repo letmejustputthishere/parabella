@@ -13,6 +13,13 @@
 
     let index = 0;
 
+    let headers = [
+        "Digital Enablement",
+        "Source to Pay",
+        "Plan to Produce",
+        "Order to Cash",
+    ];
+
     let questions = {
         german: [
             // enablement
@@ -170,6 +177,11 @@
         {language === "english" ? "NEXT" : "WEITER"}
     </button>
 </div>
+
+{#if index >= 1}
+    <h1 class="text-5xl">Technology Adoption</h1>
+{/if}
+<h1 class={index >= 1 ? "text-4xl" : "text-5xl"}>{headers[index]}</h1>
 
 {#each language === "english" ? questions.english[index] : questions.german[index] as question, questionIndex}
     <Question
