@@ -7,17 +7,17 @@
 
     let choicesDigitalEnablementGerman = [
         "Stimme überhaupt nicht zu",
-        "Stimme teilweise zu",
+        "Stimme teilweise nicht zu",
         "Stimme weder zu / nicht zu",
         "Stimme teilweise zu",
         "Stimme vollständig zu",
     ];
     let choicesDigitalEnablementEnglish = [
-        "Disagree completely",
-        "Agree partially",
+        "Fully disagree",
+        "Somewhat disagree",
         "Neither agree nor disagree",
-        "Agree partially",
-        "Agree completely",
+        "Somewhat agree",
+        "Fully agree",
     ];
     let choicesTechnologiesGerman = [
         "Vorerst nicht relevant",
