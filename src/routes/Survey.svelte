@@ -69,6 +69,7 @@
                 "Robotik-Prozessautomatisierung  (RPA) zur Unterstützung von Order to Cash-Prozessen.",
                 "Künstliche Intelligenz/Maschinelles Lernen zur Optimierung von Order-to-Cash-Prozessen.",
                 "Warehouse Management System verbunden zum ERP-System.Hands-free picking (Pick by voice/light, augmented reality).",
+                "Hands-free picking (Pick by voice/light, augmented reality).",
                 "Infrastruktur / Plattform für das Internet der Dinge (IoT).",
                 "Digitaler Zwilling des Auslieferungslagers.",
                 "Transportmanagementsystem verbunden zum ERP-System. ",
