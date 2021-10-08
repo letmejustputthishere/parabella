@@ -179,20 +179,22 @@
     </button>
 </div>
 
-{#if index >= 1}
-    <h1 class="text-5xl">Technology Adoption</h1>
-{/if}
-<h1 class={index >= 1 ? "text-4xl" : "text-5xl"}>{headers[index]}</h1>
-
-{#each language === "english" ? questions.english[index] : questions.german[index] as question, questionIndex}
-    <Question
-        {question}
-        {language}
-        topicIndex={index}
-        {questionIndex}
-        bind:answers
-    />
-{/each}
+<div class="m-6">
+    {#if index >= 1}
+        <h1 class="text-5xl">Technology Adoption</h1>
+    {/if}
+    <h1 class={index >= 1 ? "text-4xl" : "text-5xl"}>{headers[index]}</h1>
+    
+    {#each language === "english" ? questions.english[index] : questions.german[index] as question, questionIndex}
+        <Question
+            {question}
+            {language}
+            topicIndex={index}
+            {questionIndex}
+            bind:answers
+        />
+    {/each}
+</div>
 
 <div class="mt-8 flex flex-row items-center justify-center">
     <button

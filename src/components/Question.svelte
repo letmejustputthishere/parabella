@@ -36,7 +36,7 @@
 </script>
 
 <div class="my-12 bg-primary-50 border">
-    <h1 class="text-left ml-20 text-xl">{question}</h1>
+    <h1 class="text-left md:ml-20 text-xl">{question}</h1>
     <div
         class="flex flex-col md:flex-row items-start md:items-center justify-center my-2"
     >
