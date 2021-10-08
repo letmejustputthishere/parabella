@@ -47,7 +47,7 @@
 
 <style>
     :global(body.landing-page) {
-        background-image: url("/bg.jpeg");
+        /* background-image: url("/bg.jpeg"); */
         background-color: black;
         background-size: cover;
     }
