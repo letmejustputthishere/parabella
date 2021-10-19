@@ -34,18 +34,18 @@
         "Scaling on a process-wide level",
     ];
     let choicesSDGGerman = [
-        "SDG erreicht",
-        "Geringe Herausforderung",
-        "Signifikante Herausforderung",
-        "Grosse Herausforderung",
         "Informationen nicht verfügbar",
+        "Grosse Herausforderung",
+        "Signifikante Herausforderung",
+        "Geringe Herausforderung",
+        "SDG erreicht",
     ];
     let choicesSDGENglish = [
-        "SDG achieved",
-        "Challenges remain",
-        "Significant challenges remain",
-        "Major challenges remain",
         "Information unavailable",
+        "Major challenges remain",
+        "Significant challenges remain",
+        "Challenges remain",
+        "SDG achieved",
     ];
 </script>
 

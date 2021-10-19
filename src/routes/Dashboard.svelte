@@ -58,23 +58,23 @@
             "Transport platform",
         ],
         [
-            "No poverty",
-            "No hunger",
-            "Health and well-being",
-            "High quality education",
-            "Gender equality",
-            "Clean water and sanitation",
-            "Affordable and clean energy",
-            "Decent work and economic growth",
-            "Industry, innovation and infrastructure",
-            "Fewer inequalities",
-            "Sustainable cities and communities",
-            "Responsible consumption and production patterns",
-            "Measures for climate protection",
-            "Life underwater",
-            "Life on land",
-            "Peace, justice and strong institutions",
-            "Partnerships to achieve the goals",
+            "1. No poverty",
+            "2. No hunger",
+            "3. Health and well-being",
+            "4. High quality education",
+            "5. Gender equality",
+            "6. Clean water and sanitation",
+            "7. Affordable and clean energy",
+            "8. Decent work and economic growth",
+            "9. Industry, innovation and infrastructure",
+            "10. Fewer inequalities",
+            "11. Sustainable cities and communities",
+            "12. Responsible consumption and production patterns",
+            "13. Measures for climate protection",
+            "14. Life underwater",
+            "15. Life on land",
+            "16. Peace, justice and strong institutions",
+            "17. Partnerships to achieve the goals",
         ],
         // ["1.4", "1.b"],
         // ["2.1", "2.1"],
@@ -189,7 +189,7 @@
         </div>
     </div>
     <div class="mt-20 w-full md:w-2/3">
-        <h1 class="md:-ml-6 text-4xl mb-3">SDG</h1>
+        <h1 class="md:-ml-6 text-4xl mb-3">Sustainable Development Goals</h1>
         <div class="flex flex-col justify-center items-center">
             <div class="m-8 w-full md:w-2/3">
                 <RadarChart
