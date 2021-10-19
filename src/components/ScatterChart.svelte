@@ -19,6 +19,7 @@
                 data: [
                     {
                         x: calculateSum(answers[0]),
+                        // calculatenestedsum already gets rid of index 0 element
                         y: calculateNestedSum(answers),
                     },
                 ],
@@ -34,8 +35,8 @@
                 label: "Competition",
                 data: [
                     {
-                        x: 22,
-                        y: 63,
+                        x: 34,
+                        y: 60,
                     },
                 ],
                 fill: true,

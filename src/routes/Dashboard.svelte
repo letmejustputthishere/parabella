@@ -97,10 +97,10 @@
 
     // mockup data
     let competition = [
-        [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5],
-        [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2],
-        [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2, 5],
-        [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2],
+        [3.5, 3.5, 4, 3.5, 4, 4.5, 4, 3.5, 3.5],
+        [2, 2.5, 2, 2.5, 1.5, 1.5, 2, 1.5, 2, 1.5],
+        [2.5, 3, 2.5, 2.5, 2, 2, 2, 1.5, 1.5, 1.5, 1.5],
+        [3, 1.5, 1.5, 1.5, 3, 1.5, 1.5, 1.5, 2, 2],
         [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2, 5, 2.5, 3.4, 1.4, 5, 3.5, 1.5],
     ];
 
@@ -183,7 +183,8 @@
         </h1>
         <div class="flex flex-col items-center justify-center">
             <div class="m-8 w-full md:w-2/3">
-                <ScatterChart {answers} {language} />
+                <!-- dont pass down SDG data as its not relevant here -->
+                <ScatterChart answers={answers.slice(0, 4)} {language} />
             </div>
         </div>
     </div>
