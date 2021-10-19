@@ -37,6 +37,30 @@
         "17. Partnerships to achieve the goals",
     ];
 
+    let headersGerman = [
+        "Digital Enablement",
+        "Source to Pay",
+        "Plan to Produce",
+        "Order to Cash",
+        "1. Keine Armut",
+        "2. Kein Hunger",
+        "3. Gesundheit und Wohlergehen",
+        "4. Hochwertige Bildung",
+        "5. Geschlechtergleichstellung",
+        "6. Sauberes Wasser und Sanitärversorgung",
+        "7. Bezahlbare und saubere Energie",
+        "8. Menschenwürdige Arbeit und Wirtschaftswachstum",
+        "9. Industrie, Innovation und Infrastruktur",
+        "10. Weniger Ungleichheiten",
+        "11. Nachhaltige Städte und Gemeinden",
+        "12. Verantwortungsvolle Konsum- und Produktionsmuster",
+        "13. Massnahmen zum Klimaschutz",
+        "14. Leben unter Wasser",
+        "15. Leben an Land",
+        "16. Frieden, Gerechtigkeit und starke Institutionen",
+        "17. Partnerschaften zur Erreichung der Ziele",
+    ];
+
     let questions = {
         german: [
             // enablement
@@ -388,7 +412,9 @@
     {:else if index > 3}
         <h1 class="text-5xl">SDG</h1>
     {/if}
-    <h1 class={index >= 1 ? "text-4xl" : "text-5xl"}>{headers[index]}</h1>
+    <h1 class={index >= 1 ? "text-4xl" : "text-5xl"}>
+        {language === "english" ? headers[index] : headersGerman[index]}
+    </h1>
 
     {#each language === "english" ? questions.english[index] : questions.german[index] as question, questionIndex}
         <Question
