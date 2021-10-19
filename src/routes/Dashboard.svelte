@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-    import Chart from "chart.js/auto";
     import ScatterChart from "../components/ScatterChart.svelte";
     import RadarChart from "../components/RadarChart.svelte";
     import BarChart from "../components/BarChart.svelte";
@@ -58,7 +57,42 @@
             "TMS",
             "Transport platform",
         ],
-        ["Source to Pay", "Plan to Produce", "Order to Cash"],
+        [
+            "No poverty",
+            "No hunger",
+            "Health and well-being",
+            "High quality education",
+            "Gender equality",
+            "Clean water and sanitation",
+            "Affordable and clean energy",
+            "Decent work and economic growth",
+            "Industry, innovation and infrastructure",
+            "Fewer inequalities",
+            "Sustainable cities and communities",
+            "Responsible consumption and production patterns",
+            "Measures for climate protection",
+            "Life underwater",
+            "Life on land",
+            "Peace, justice and strong institutions",
+            "Partnerships to achieve the goals",
+        ],
+        // ["1.4", "1.b"],
+        // ["2.1", "2.1"],
+        // ["3.8", "3.9"],
+        // ["4.4", "4.a"],
+        // ["5.1", "5.5"],
+        // ["6.3", "6.4"],
+        // ["7.2", "7.a"],
+        // ["8.2", "8.3", "8.5", "8.7", "8.8"],
+        // ["9.1", "9.3", "9.4"],
+        // ["10.2", "10.3"],
+        // ["11.2", "11.6"],
+        // ["12.2", "12.5", "12.6", "12.8"],
+        // ["13.1", "13.2", "13.3"],
+        // ["14.1", "14.b"],
+        // ["15.a", "15.b"],
+        // ["16.5", "16.6"],
+        // ["17.12", "17.16"],
     ];
 
     // mockup data
@@ -67,6 +101,7 @@
         [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2],
         [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2, 5],
         [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2],
+        [3.4, 2.1, 4, 1.2, 1, 3, 4, 1, 3.5, 2, 5, 2.5, 3.4, 1.4, 5, 3.5, 1.5],
     ];
 
     onMount(topFunction);
@@ -82,6 +117,11 @@
                     labels={labels[0]}
                     competition={competition[0]}
                     id="enablement"
+                />
+                <BarChart
+                    answers={answers[0]}
+                    competition={competition[0]}
+                    id="enablement-bar"
                 />
             </div>
         </div>
@@ -144,6 +184,32 @@
         <div class="flex flex-col items-center justify-center">
             <div class="m-8 w-full md:w-2/3">
                 <ScatterChart {answers} {language} />
+            </div>
+        </div>
+    </div>
+    <div class="mt-20 w-full md:w-2/3">
+        <h1 class="md:-ml-6 text-4xl mb-3">SDG</h1>
+        <div class="flex flex-col justify-center items-center">
+            <div class="m-8 w-full md:w-2/3">
+                <RadarChart
+                    answers={Array.from(
+                        answers.slice(4),
+                        (answer) =>
+                            answer.reduce((a, b) => a + b, 0) / answer.length
+                    )}
+                    labels={labels[4]}
+                    competition={competition[4]}
+                    id="sdg"
+                />
+                <BarChart
+                    answers={Array.from(
+                        answers.slice(4),
+                        (answer) =>
+                            answer.reduce((a, b) => a + b, 0) / answer.length
+                    )}
+                    competition={competition[4]}
+                    id="sdg-bar"
+                />
             </div>
         </div>
     </div>

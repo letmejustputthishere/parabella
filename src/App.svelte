@@ -70,9 +70,9 @@
     <div class="flex-grow w-full">
         <Router {url}>
             <!-- <Route path="/"><Survey {language} bind:answers/></Route> -->
-            <!-- <Route path="/"><Dashboard {language} bind:answers /></Route> -->
+            <Route path="/"><Dashboard {language} bind:answers /></Route>
 
-            <Route path="/"><LandingPage {language} /></Route>
+            <!-- <Route path="/"><LandingPage {language} /></Route> -->
             <Route path="survey"><Survey {language} bind:answers /></Route>
             <Route path="dashboard"><Dashboard {language} {answers} /></Route>
         </Router>
