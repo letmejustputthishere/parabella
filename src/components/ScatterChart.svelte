@@ -59,15 +59,15 @@
             var xScale = chart.scales["x"];
             var yScale = chart.scales["y"];
 
-            var midX = xScale.getPixelForValue(xScale.max / 2);
-            var midY = yScale.getPixelForValue(yScale.max / 2);
+            var midX = xScale.getPixelForValue(27);
+            var midY = yScale.getPixelForValue(93);
             ctx.fillStyle = "rgb(0, 0, 0)";
             ctx.font = calculateFontSize().toString() + "px sans-serif";
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
             ctx.fillText(
                 "Fashionistas",
-                xScale.getPixelForValue(11.25),
+                xScale.getPixelForValue(15.25),
                 yScale.getPixelForValue(150)
             );
 
@@ -79,14 +79,14 @@
 
             ctx.fillText(
                 "Beginners",
-                xScale.getPixelForValue(11.25),
-                yScale.getPixelForValue(155 / 2 - 5)
+                xScale.getPixelForValue(14.25),
+                yScale.getPixelForValue(93 - 5)
             );
 
             ctx.fillText(
                 "Conservatives",
                 xScale.getPixelForValue(3 * 11.25),
-                yScale.getPixelForValue(155 / 2 - 5)
+                yScale.getPixelForValue(93 - 5)
             );
 
             // Top left quadrant
@@ -139,7 +139,7 @@
                     x: {
                         type: "linear",
                         position: "bottom",
-                        min: 0,
+                        min: 9,
                         max: 45,
                         title: {
                             text:
@@ -158,7 +158,7 @@
                     },
                     y: {
                         type: "linear",
-                        min: 0,
+                        min: 31,
                         max: 155,
                         title: {
                             text:
