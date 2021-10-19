@@ -33,6 +33,20 @@
         "Implementation beyond initial pilot; in use in some areas",
         "Scaling on a process-wide level",
     ];
+    let choicesSDGGerman = [
+        "SDG erreicht",
+        "Geringe Herausforderung",
+        "Signifikante Herausforderung",
+        "Grosse Herausforderung",
+        "Informationen nicht verfügbar",
+    ];
+    let choicesSDGENglish = [
+        "SDG achieved",
+        "Challenges remain",
+        "Significant challenges remain",
+        "Major challenges remain",
+        "Information unavailable",
+    ];
 </script>
 
 <div class="my-12 bg-primary-50 border">
@@ -40,7 +54,7 @@
     <div
         class="flex flex-col md:flex-row items-start md:items-center justify-center my-2"
     >
-        {#each language === "english" ? (topicIndex >= 1 ? choicesTechnologiesEnglish : choicesDigitalEnablementEnglish) : topicIndex >= 1 ? choicesTechnologiesGerman : choicesDigitalEnablementGerman as choice, index}
+        {#each language === "english" ? (topicIndex > 3 ? choicesSDGENglish : topicIndex >= 1 ? choicesTechnologiesEnglish : choicesDigitalEnablementEnglish) : topicIndex > 3 ? choicesSDGGerman : topicIndex >= 1 ? choicesTechnologiesGerman : choicesDigitalEnablementGerman as choice, index}
             <div class="my-2">
                 <label
                     class="flex flex-row md:flex-col md:mx-7 items-center md:items-center justify-center"
