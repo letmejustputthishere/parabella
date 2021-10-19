@@ -92,6 +92,99 @@
                 "Transportmanagementsystem verbunden zum ERP-System. ",
                 "Plattform für ausgehende Transporte.",
             ],
+            // SDG
+            // no poverty
+            [
+                "Bis 2030 sicherstellen, dass alle Männer und Frauen, insbesondere die Armen und Schwachen, die gleichen Rechte auf wirtschaftliche Ressourcen sowie Zugang zu grundlegenden Diensten, Grundeigentum und Verfügungsgewalt über Grund und Boden und sonstigen Vermögensformen, Erbschaften, natürlichen Ressourcen, geeigneten neuen Technologien und Finanzdienstleistungen einschließlich Mikrofinanzierung haben",
+                "Auf nationaler, regionaler und internationaler Ebene solide politische Rahmen auf der Grundlage armutsorientierter und geschlechtersensibler Entwicklungsstrategien schaffen, um beschleunigte Investitionen in Maßnahmen zur Beseitigung der Armut zu unterstützen",
+            ],
+            // no hunger
+            [
+                "Bis 2030 den Hunger beenden und sicherstellen, dass alle Menschen, insbesondere die Armen und Menschen in prekären Situationen, einschließlich Kleinkindern, ganzjährig Zugang zu sicheren, nährstoffreichen und ausreichenden Nahrungsmitteln haben",
+                "Bis 2030 die Nachhaltigkeit der Systeme der Nahrungsmittelproduktion sicherstellen und resiliente landwirtschaftliche Methoden anwenden, die die Produktivität und den Ertrag steigern, zur Erhaltung der Ökosysteme beitragen, die Anpassungsfähigkeit an Klimaänderungen, extreme Wetterereignisse, Dürren, Überschwemmungen und andere Katastrophen erhöhen und die Flächen- und Bodenqualität schrittweise verbessern",
+            ],
+            // health and well-being
+            [
+                "Die allgemeine Gesundheitsversorgung, einschließlich der Absicherung gegen finanzielle Risiken, den Zugang zu hochwertigen grundlegenden Gesundheitsdiensten und den Zugang zu sicheren, wirksamen, hochwertigen und bezahlbaren unentbehrlichen Arzneimitteln und Impfstoffen für alle erreichen",
+                "Bis 2030 die Zahl der Todesfälle und Erkrankungen aufgrund gefährlicher Chemikalien und der Verschmutzung und Verunreinigung von Luft, Wasser und Boden erheblich verringern",
+            ],
+            // high quality education
+            [
+                "Bis 2030 die Zahl der Jugendlichen und Erwachsenen wesentlich erhöhen, die über die entsprechenden Qualifikationen einschließlich fachlicher und beruflicher Qualifikationen für eine Beschäftigung, eine menschenwürdige Arbeit und Unternehmertum verfügen",
+                "Bildungseinrichtungen bauen und ausbauen, die kinder-, behinderten- und geschlechtergerecht sind und eine sichere, gewaltfreie, inklusive und effektive Lernumgebung für alle bieten",
+            ],
+            // gender equality
+            [
+                "Alle Formen der Diskriminierung von Frauen und Mädchen überall auf der Welt beenden",
+                "Die volle und wirksame Teilhabe von Frauen und ihre Chancengleichheit bei der Übernahme von Führungsrollen auf allen Ebenen der Entscheidungsfindung im politischen, wirtschaftlichen und öffentlichen Leben sicherstellen",
+            ],
+            // clean water and sanitation
+            [
+                "Bis 2030 die Wasserqualität durch Verringerung der Verschmutzung, Beendigung des Einbringens und Minimierung der Freisetzung gefährlicher Chemikalien und Stoffe, Halbierung des Anteils unbehandelten Abwassers und eine beträchtliche Steigerung der Wiederaufbereitung und gefahrlosen Wiederverwendung weltweit verbessern",
+                "Bis 2030 die Effizienz der Wassernutzung in allen Sektoren wesentlich steigern und eine nachhaltige Entnahme und Bereitstellung von Süßwasser gewährleisten, um der Wasserknappheit zu begegnen und die Zahl der unter Wasserknappheit leidenden Menschen erheblich zu verringern",
+            ],
+            // affordable and clean energy
+            [
+                "Bis 2030 den Anteil erneuerbarer Energie am globalen Energiemix deutlich erhöhen",
+                "Bis 2030 die internationale Zusammenarbeit verstärken, um den Zugang zur Forschung und Technologie im Bereich saubere Energie, namentlich erneuerbare Energie, Energieeffizienz sowie fortschrittliche und saubere Technologien für fossile Brennstoffe, zu erleichtern, und Investitionen in die Energieinfrastruktur und saubere Energietechnologien fördern",
+            ],
+            // Decent work and economic growth
+            [
+                "Eine höhere wirtschaftliche Produktivität durch Diversifizierung, technologische Modernisierung und Innovation erreichen, einschließlich durch Konzentration auf mit hoher Wertschöpfung verbundene und arbeitsintensive Sektoren",
+                "Entwicklungsorientierte Politiken fördern, die produktive Tätigkeiten, die Schaffung menschenwürdiger Arbeitsplätze, Unternehmertum, Kreativität und Innovation unterstützen, und die Formalisierung und das Wachstum von Kleinst-, Klein- und Mittelunternehmen unter anderem durch den Zugang zu Finanzdienstleistungen begünstigen",
+                "Bis 2030 produktive Vollbeschäftigung und menschenwürdige Arbeit für alle Frauen und Männer, einschließlich junger Menschen und Menschen mit Behinderungen, sowie gleiches Entgelt für gleichwertige Arbeit erreichen",
+                "Sofortige und wirksame Maßnahmen ergreifen, um Zwangsarbeit abzuschaffen, moderne Sklaverei und Menschenhandel zu beenden und das Verbot und die Beseitigung der schlimmsten Formen der Kinderarbeit, einschließlich der Einziehung und des Einsatzes von Kindersoldaten, sicherstellen und bis 2025 jeder Form von Kinderarbeit ein Ende setzen",
+                "Die Arbeitsrechte schützen und sichere Arbeitsumgebungen für alle Arbeitnehmer, einschließlich der Wanderarbeitnehmer, insbesondere der Wanderarbeitnehmerinnen, und der Menschen in prekären Beschäftigungsverhältnissen, fördern",
+            ],
+            // Industry, innovation and infrastructure
+            [
+                "Eine hochwertige, verlässliche, nachhaltige und widerstandsfähige Infrastruktur aufbauen, einschließlich regionaler und grenzüberschreitender Infrastruktur, um die wirtschaftliche Entwicklung und das menschliche Wohlergehen zu unterstützen, und dabei den Schwerpunkt auf einen erschwinglichen und gleichberechtigten Zugang für alle legen",
+                "Insbesondere in den Entwicklungsländern den Zugang kleiner Industrie- und anderer Unternehmen zu Finanzdienstleistungen, einschließlich bezahlbaren Krediten, und ihre Einbindung in Wertschöpfungsketten und Märkte erhöhen",
+                "Bis 2030 die Infrastruktur modernisieren und die Industrien nachrüsten, um sie nachhaltig zu machen, mit effizienterem Ressourceneinsatz und unter vermehrter Nutzung sauberer und umweltverträglicher Technologien und Industrieprozesse, wobei alle Länder Maßnahmen entsprechend ihren jeweiligen Kapazitäten ergreifen",
+            ],
+            // Fewer inequalities
+            [
+                "Bis 2030 die Infrastruktur modernisieren und die Industrien nachrüsten, um sie nachhaltig zu machen, mit effizienterem Ressourceneinsatz und unter vermehrter Nutzung sauberer und umweltverträglicher Technologien und Industrieprozesse, wobei alle Länder Maßnahmen entsprechend ihren jeweiligen Kapazitäten ergreifen",
+                "Chancengleichheit gewährleisten und Ungleichheit der Ergebnisse reduzieren, namentlich durch die Abschaffung diskriminierender Gesetze, Politiken und Praktiken und die Förderung geeigneter gesetzgeberischer, politischer und sonstiger Maßnahmen in dieser Hinsicht",
+            ],
+            // Sustainable cities and communities
+            [
+                "Bis 2030 den Zugang zu sicheren, bezahlbaren, zugänglichen und nachhaltigen Verkehrssystemen für alle ermöglichen und die Sicherheit im Straßenverkehr verbessern, insbesondere durch den Ausbau des öffentlichen Verkehrs, mit besonderem Augenmerk auf den Bedürfnissen von Menschen in prekären Situationen, Frauen, Kindern, Menschen mit Behinderungen und älteren Menschen",
+                "Bis 2030 die von den Städten ausgehende Umweltbelastung pro Kopf senken, unter anderem mit besonderer Aufmerksamkeit auf der Luftqualität und der kommunalen und sonstigen Abfallbehandlung",
+            ],
+            // Responsible consumption and production patterns
+            [
+                "Bis 2030 die nachhaltige Bewirtschaftung und effiziente Nutzung der natürlichen Ressourcen erreichen",
+                "Bis 2030 das Abfallaufkommen durch Vermeidung, Verminderung, Wiederverwertung und Wiederverwendung deutlich verringern",
+                "Die Unternehmen, insbesondere große und transnationale Unternehmen, dazu ermutigen, nachhaltige Verfahren einzuführen und in ihre Berichterstattung Nachhaltigkeitsinformationen aufzunehmen",
+                "Bis 2030 sicherstellen, dass die Menschen überall über einschlägige Informationen und das Bewusstsein für nachhaltige Entwicklung und eine Lebensweise in Harmonie mit der Natur verfügen",
+            ],
+            // Measures for climate protection
+            [
+                "Die Widerstandskraft und die Anpassungsfähigkeit gegenüber klimabedingten Gefahren und Naturkatastrophen in allen Ländern stärken",
+                "Klimaschutzmaßnahmen in die nationalen Politiken, Strategien und Planungen einbeziehen",
+                "Die Aufklärung und Sensibilisierung sowie die personellen und institutionellen Kapazitäten im Bereich der Abschwächung des Klimawandels, der Klimaanpassung, der Reduzierung der Klimaauswirkungen sowie der Frühwarnung verbessern",
+            ],
+            // Life underwater
+            [
+                "Bis 2025 alle Arten der Meeresverschmutzung, insbesondere durch vom Lande ausgehende Tätigkeiten und namentlich Meeresmüll und Nährstoffbelastung, verhüten und erheblich verringern",
+                "Den Zugang der handwerklichen Kleinfischer zu den Meeresressourcen und Märkten gewährleisten",
+            ],
+            // Life on land
+            [
+                "Finanzielle Mittel aus allen Quellen für die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt und der Ökosysteme aufbringen und deutlich erhöhen",
+                "Erhebliche Mittel aus allen Quellen und auf allen Ebenen für die Finanzierung einer nachhaltigen Bewirtschaftung der Wälder aufbringen und den Entwicklungsländern geeignete Anreize für den vermehrten Einsatz dieser Bewirtschaftungsform bieten, namentlich zum Zweck der Walderhaltung und Wiederaufforstung",
+            ],
+            // Peace, justice and strong institutions
+            [
+                "Korruption und Bestechung in allen ihren Formen erheblich reduzieren",
+                "Leistungsfähige, rechenschaftspflichtige und transparente Institutionen auf allen Ebenen aufbauen",
+            ],
+            // Partnerships to achieve the goals
+            [
+                "Die rasche Umsetzung des zoll- und kontingentfreien Marktzugangs auf dauerhafter Grundlage für alle am wenigsten entwickelten Länder im Einklang mit den Beschlüssen der Welthandelsorganisation erreichen, unter anderem indem sichergestellt wird, dass die für Importe aus den am wenigsten entwickelten Ländern geltenden präferenziellen Ursprungsregeln transparent und einfach sind und zur Erleichterung des Marktzugangs beitragen",
+                "Die Globale Partnerschaft für nachhaltige Entwicklung ausbauen, ergänzt durch Multi-Akteur-Partnerschaften zur Mobilisierung und zum Austausch von Wissen, Fachkenntnissen, Technologie und finanziellen Ressourcen, um die Erreichung der Ziele für nachhaltige Entwicklung in allen Ländern und insbesondere in den Entwicklungsländern zu unterstützen",
+            ],
         ],
         english: [
             // enablement
