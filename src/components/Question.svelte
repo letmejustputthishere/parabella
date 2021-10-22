@@ -65,7 +65,7 @@
                         bind:group={answers[topicIndex][questionIndex]}
                         value={index + 1}
                     />
-                    <span class="text-center text-sm md:text-base">
+                    <span class="md:text-center text-sm md:text-base">
                         {choice}
                     </span>
                 </label>
