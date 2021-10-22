@@ -220,8 +220,8 @@
                 "The responsibility and methodology for governing digital initiatives are clearly defined.",
                 "Cross-functional team work is highly important to the company.",
                 "Dynamic Capabilities are established in order to react rapidly to internal and external changes.",
-                "Our employees are made acquainted with digital 85 technologies and are enabled to use them.",
-                "Digitalization is an ongoing strategic change 85 project in our entire company that is communicated across channels.",
+                "Our employees are made acquainted with digital technologies and are enabled to use them.",
+                "Digitalization is an ongoing strategic change project in our entire company that is communicated across channels.",
             ],
             // technology
             // stp
